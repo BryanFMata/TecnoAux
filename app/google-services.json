@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "142341516777",
+    "project_id": "tecnoaux-79485",
+    "storage_bucket": "tecnoaux-79485.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142341516777:android:0aa21b81d359367b242f78",
+        "android_client_info": {
+          "package_name": "com.example.tecnoaux"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142341516777-8081g5cn8j09kkqfqhho7rosfi9v3je5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAToqtXqbC0EaVocnQHekYrtg9ONTJw0f0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142341516777-8081g5cn8j09kkqfqhho7rosfi9v3je5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

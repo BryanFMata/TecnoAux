@@ -1,0 +1,29 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    id="ic_shopping_bag_blue">
+    <path
+        id="path"
+        d="M 6 2 L 3 6 L 3 20 C 3 20.53 3.211 21.039 3.586 21.414 C 3.961 21.789 4.47 22 5 22 L 19 22 C 19.53 22 20.039 21.789 20.414 21.414 C 20.789 21.039 21 20.53 21 20 L 21 6 L 18 2 L 6 2 Z"
+        fill="#00000000"
+        stroke="#19369c"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    <path
+        id="path_1"
+        d="M 3 6 L 21 6"
+        fill="#00000000"
+        stroke="#19369c"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    <path
+        id="path_2"
+        d="M 16 10 C 16 11.061 15.579 12.078 14.828 12.828 C 14.078 13.579 13.061 14 12 14 C 10.939 14 9.922 13.579 9.172 12.828 C 8.421 12.078 8 11.061 8 10"
+        fill="#00000000"
+        stroke="#19369c"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>

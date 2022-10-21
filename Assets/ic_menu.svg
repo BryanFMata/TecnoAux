@@ -1,0 +1,21 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 18"
+    id="ic_menu">
+    <path
+        id="path"
+        d="M 3 12 L 15 12"
+        fill="#00000000"
+        stroke="#0d1333"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    <path
+        id="path_1"
+        d="M 3 6 L 21 6"
+        fill="#00000000"
+        stroke="#0d1333"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>

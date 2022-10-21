@@ -1,0 +1,29 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    id="ic_more_vertical">
+    <path
+        id="path"
+        d="M 12 13 C 12.552 13 13 12.552 13 12 C 13 11.448 12.552 11 12 11 C 11.448 11 11 11.448 11 12 C 11 12.552 11.448 13 12 13 Z"
+        fill="#00000000"
+        stroke="#61688b"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    <path
+        id="path_1"
+        d="M 12 6 C 12.552 6 13 5.552 13 5 C 13 4.448 12.552 4 12 4 C 11.448 4 11 4.448 11 5 C 11 5.552 11.448 6 12 6 Z"
+        fill="#00000000"
+        stroke="#61688b"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    <path
+        id="path_2"
+        d="M 12 20 C 12.552 20 13 19.552 13 19 C 13 18.448 12.552 18 12 18 C 11.448 18 11 18.448 11 19 C 11 19.552 11.448 20 12 20 Z"
+        fill="#00000000"
+        stroke="#61688b"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>

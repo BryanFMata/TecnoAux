@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/toolbar_main" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:text="Olá Admin,"
+        android:textColor="#0D1333"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:text="Acesse o módulo que melhor possa te ajudar"
+        android:textColor="#61688b"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:text="Módulos"
+        android:textColor="#0D1333"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <View
+        android:id="@+id/rectangle_Introducao"
+        android:layout_width="292dp"
+        android:layout_height="164dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rectangle_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="164dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:text="Introdução à Computação"
+        android:textColor="#FDFAFA"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_Introducao"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_Introducao" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="91dp"
+        android:layout_height="133dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_Introducao"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_Introducao"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_Introducao"
+        app:srcCompat="@drawable/comp" />
+
+    <View
+        android:id="@+id/rectangle_Dicionario"
+        android:layout_width="288dp"
+        android:layout_height="161dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rectangle_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_Introducao" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:text="Dicionário"
+        android:textColor="#FDFAFA"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_Dicionario"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_Dicionario"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_Dicionario"
+        app:layout_constraintVertical_bias="0.393" />
+
+    <ImageView
+
+        android:id="@+id/imageView4"
+        android:layout_width="91dp"
+        android:layout_height="133dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_Dicionario"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_Dicionario"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_Dicionario"
+        app:srcCompat="@drawable/data" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
