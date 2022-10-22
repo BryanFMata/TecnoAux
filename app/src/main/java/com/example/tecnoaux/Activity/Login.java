@@ -79,6 +79,15 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+
+        btn_cadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login.this, Register.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     private void abrirTelaPrincipal() {
