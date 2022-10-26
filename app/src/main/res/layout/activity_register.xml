@@ -19,6 +19,16 @@
         android:textSize="40sp" />
 
     <EditText
+        android:id="@+id/edt_nome_register"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <EditText
         android:id="@+id/edt_email_register"
         android:layout_width="380dp"
         android:layout_height="wrap_content"

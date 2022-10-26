@@ -17,6 +17,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.tecnoaux.MainActivity;
+import com.example.tecnoaux.Models.UserModel;
 import com.example.tecnoaux.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -25,6 +26,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Register extends AppCompatActivity {
 
+    private EditText edt_nome_register;
     private EditText edt_email_register;
     private EditText edt_senha_register;
     private EditText edt_confirmar_senha_register;
@@ -40,6 +42,7 @@ public class Register extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        edt_nome_register = findViewById(R.id.edt_nome_register);
         edt_email_register = findViewById(R.id.edt_email_register);
         edt_senha_register = findViewById(R.id.edt_senha_register);
         edt_confirmar_senha_register = findViewById(R.id.edt_confirmar_senha_register);
@@ -64,19 +67,26 @@ public class Register extends AppCompatActivity {
         btn_cadastrar_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String registerEmail = edt_email_register.getText().toString();
+
+                UserModel userModel = new UserModel();
+
+                userModel.setEmail(edt_email_register.getText().toString());
+                userModel.setNome(edt_nome_register.getText().toString());
                 String senha = edt_senha_register.getText().toString();
                 String confirmarSenha = edt_confirmar_senha_register.getText().toString();
 
-                if(!TextUtils.isEmpty(registerEmail) && !TextUtils.isEmpty(senha)
+                if(!TextUtils.isEmpty(userModel.getNome())
+                        && !TextUtils.isEmpty(userModel.getEmail()) && !TextUtils.isEmpty(senha)
                         && !TextUtils.isEmpty(confirmarSenha)){
                     if(senha.equals(confirmarSenha)){
                         loginProgressBar_register.setVisibility(View.VISIBLE);
 
-                        mAuth.createUserWithEmailAndPassword(registerEmail,senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        mAuth.createUserWithEmailAndPassword(userModel.getEmail(),senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
+                                    userModel.setId(mAuth.getUid());
+                                    userModel.salvar();
                                     abrirTelaPrincipal();
                                 } else{
                                     String error = task.getException().getMessage();
