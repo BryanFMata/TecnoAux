@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.VariaveisModulo">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/include4"
+            layout="@layout/toolbar" />
+
+        <TextView
+            android:id="@+id/txt_titulo_parte_variavel"
+            android:layout_width="383dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:text="Entenda o que são variáveis na programação e saiba como lidar com elas"
+            android:textColor="#0D1333"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include4" />
+
+        <TextView
+            android:id="@+id/refTextVariavel"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Retirado/Adaptado de: https://gaea.com.br/variaveis-programacao/\nEscrito por: Gaea Consulting"
+            android:textColor="#0D1333"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_titulo_parte_variavel" />
+
+        <TextView
+            android:id="@+id/txtViewP1"
+            android:layout_width="383dp"
+            android:layout_height="370dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Para quem trabalha com TI e precisa lidar com rotinas de desenvolvimento de software, as variáveis na programação são uma parte fundamental da rotina. Entender como elas funcionam é o primeiro passo para estruturar soluções robustas e que consigam atender às demandas dos usuários.\n      As variáveis na programação orientam as ações do código-fonte de aplicações de qualquer sistema. Com elas os processadores podem manipular conteúdos e garantir que o usuário sempre tenha os resultados esperados. Justamente por isso, os problemas de variáveis são capazes de atrapalhar o funcionamento de toda a aplicação.\n"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/refTextVariavel" />
+
+        <TextView
+            android:id="@+id/txtViewT1"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="O que é um algoritmo?"
+            android:textColor="#0D1333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP1" />
+
+        <TextView
+            android:id="@+id/txtViewP2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Algoritmo é o termo utilizado na área de TI para definir um conjunto básico de regras, variáveis, instruções e condicionantes que definem o funcionamento de um software. Eles funcionam como uma receita de bolo, guiando o computador de acordo com as interações do usuário. Nesse sentido, a estrutura de um algoritmo é moldada da seguinte maneira: \n        • instruções de entrada, que definem como cada variável deve ser criada de acordo com a ação do usuário;\n        •	instruções operacionais, que definem que ações devem ser feitas de acordo com as ações do usuário;\n        •	instruções de saída, que definem o que deve ser exibido na tela do usuário de acordo com as suas ações."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewT1" />
+
+        <TextView
+            android:id="@+id/txtViewT2"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="O que são variáveis na programação?"
+            android:textColor="#0D1333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP2" />
+        <TextView
+            android:id="@+id/txtViewP3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Variável é o nome utilizado para definir um ou mais valores que são manipulados pelos programas durante a sua operação. O nome “variável” é utilizado por ser um tipo de conteúdo que pode apresentar diferentes valores enquanto o sistema está em execução. Tudo dependerá do comando do usuário e o tipo de operação que será realizada. O modelo para criação das variáveis, em diversas linguagens de programação."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewT2" />
+
+        <TextView
+            android:id="@+id/txtViewT3"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Por que as variáveis são importantes para um programador?"
+            android:textColor="#0D1333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP3" />
+        <TextView
+            android:id="@+id/txtViewP4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      As variáveis de programação são fundamentais para o dia a dia do programador. Elas orientam o programa a executar operações, permitem a validação de dados, evitam que o usuário faça operações proibidas e auxiliam na manutenção da integridade dos registros existentes. Assim, a ferramenta pode apresentar a usabilidade esperada de maneira contínua. \n      Variáveis de programação também podem ser utilizadas para orientar o programa a utilizar a memória do computador corretamente. Se o programador faz a manipulação dessa parte do código-fonte corretamente, ele consegue orientar o software a fazer um bom tratamento de dados. Dessa maneira, o sistema terá uma taxa de erros muito menor."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewT3" />
+        <TextView
+            android:id="@+id/txtViewT4"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Constantes:"
+            android:textColor="#0D1333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP4" />
+        <TextView
+            android:id="@+id/txtViewP5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Podemos começar explicando que uma constante é uma variável! Sim, é uma variável no sentido de que uma constante também reserva um espaço de memória para o tipo de dado que irá manipular. Entretanto, uma constante armazenará um valor ÚNICO, um valor que NÃO mudará com o tempo de execução do programa. Portanto, lembre-se: constantes e variáveis são espaços de memória reservados para o tipo de dados que você deseja trabalhar. Constantes são valores fixos que você utilizará em seu programa e variáveis são valores que precisam variar durante o tempo de execução do seu programa."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewT4" />
+        <TextView
+            android:id="@+id/txtViewT6"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Nomes de variáveis e constantes:"
+            android:textColor="#0D1333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP5" />
+        <TextView
+            android:id="@+id/txtViewP6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Além de tudo o que já foi dito, tem mais algumas coisinhas que vocês precisam saber. Nós sempre precisaremos declarar variáveis em nossos programas. Então, declarar variável é um termo importante em computação. Outro termo relevante é o IDENTIFICADOR. Um identificador é o nome que damos às nossas variáveis.\n        A sintaxe de declaração pode ser diferente para muitas linguagens de programação. Por exemplo, em Java fazemos assim: String nome, em que STRING é um TIPO DE DADO e NOME é o nome da variável, ou seja, o seu IDENTIFICADOR."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewT6" />
+        <TextView
+            android:id="@+id/txtViewT7"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Quais são os tipos de variáveis na programação?"
+            android:textColor="#0D1333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP6" />
+        <TextView
+            android:id="@+id/txtViewP7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Para fazer um bom uso de variáveis de programação é crucial compreender quais são os tipos. Confira a seguir os principais:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewT7" />
+        <TextView
+            android:id="@+id/txtViewP8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="int: As variáveis int são utilizadas para definirem números inteiros. Eles podem ser positivos ou negativos. Porém, não podem incluir números com duas ou mais casas decimais. Exemplo: int nota = 10\nfloat: As variáveis do tipo float são utilizadas para armazenar números reais. Elas são empregadas em operações simples que contenham números com duas casas decimais. O armazenamento dos dados ocorre com precisão simples. Esse tipo de variável suporta as mesmas operações que as variáveis integrais. Em algumas linguagens, como a Pyhton, o responsável pelo sistema pode realizar operações envolvendo variáveis com números inteiros e reais sem dificuldades. Nesse caso, o resultado final sempre será uma variável float. Exemplo: float pi = 3,1415\ndouble: As variáveis do tipo double são semelhantes às variáveis float. Elas permitem o armazenamento de números reais, ou seja, com ponto flutuante, mas com precisão dupla. Isso dá às variáveis double o dobro da capacidade das variáveis float. Exemplo: double pi = 3,14159265358979323\nchar: Esse tipo de variável é utilizado para armazenar um único caractere (como uma letra). Nesse caso, as variáveis desse tipo não podem ser utilizadas em operações de soma, subtração, divisão ou multiplicação. Afinal, o software interpretará o conteúdo como se ele fosse uma letra. Na maioria das linguagens, estes devem ser declarados com o valor entre apóstrofos. Exemplo: char variavel = ‘C’\nstring: As strings são variáveis utilizadas para o armazenamento de faixas de texto. Toda palavra ou frase armazenada nesse tipo de variável será codificada de acordo com os padrões da linguagem de programação adotada pela equipe. Por ser uma variável para texto, as strings não podem ser adotadas em operações matemáticas. Mas elas são úteis para exibir mensagens para os usuários, armazenar nomes e outros tipos de registros importantes. Em algumas linguagens, elas também podem ser manipuladas para modificar sentenças de várias frases diferentes. Essas variáveis assumem o tipo literal. Exemplo: String banda = “Green Day”\nboolean: As variáveis do tipo boolean, ou apenas booleanas, são implementadas com um único objetivo: adotar valores de verdadeiro (true) ou falso (false). Isso permite ao software validar registros, definir quais passos tomar após uma ação do usuário, ou automatizar processos. Basta que a equipe de desenvolvimento monte um processo de validação adequado. Essas variáveis assumem o tipo lógico. Em outras palavras, variáveis booleanas são fundamentais para o processo de criação de um programa. Elas se integram a outros tipos de variáveis em funções responsáveis por indicar qual processo deve ser executado após o usuário inserir uma informação ou executar uma operação. Assim, a ferramenta pode entregar uma boa usabilidade de maneira contínua.Exemplo: boolean estaAtivado = true ou boolean estaAtivado = false"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP7" />
+        <TextView
+            android:id="@+id/txtViewPF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="\nExplicado os principais tipos que uma variável pode assumir, essas, como citado anteriormente, podem ser usadas para orientar o programa a executar operações, por meio da criação de funções em todo o código. Você deve estar se perguntando “Tá bom, mas o que é uma função?”. Descubra na próxima fase :D."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP8" />
+
+        <Button
+            android:id="@+id/btn_quiz_texto"
+            android:layout_width="387dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="#02366c"
+            android:fontFamily="@font/nunito_sans"
+            android:text="Ir para o quiz"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewPF" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

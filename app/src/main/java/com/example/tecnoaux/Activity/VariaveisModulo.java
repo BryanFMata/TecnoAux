@@ -5,40 +5,42 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.tecnoaux.MainActivity;
 import com.example.tecnoaux.R;
 
-public class IntroducaoComputacao extends AppCompatActivity {
+public class VariaveisModulo extends AppCompatActivity {
+    private ImageView returnIcon;
+    private TextView tittleToolbar;
 
-    ImageView returnIcon;
-    TextView tittleToolbar;
-    View rectangle_part1;
+    private Button btnQuizTexto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_introducao_computacao);
+        setContentView(R.layout.activity_texto_variaveis);
         returnIcon = findViewById(R.id.return_Icon);
         returnIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(IntroducaoComputacao.this, MainActivity.class);
+                Intent intent = new Intent(VariaveisModulo.this, IntroducaoComputacao.class);
                 startActivity(intent);
                 finish();
             }
         });
         tittleToolbar = findViewById(R.id.tittle_Toolbar);
-        tittleToolbar.setText("Introdução à Computação");
-        rectangle_part1 = findViewById(R.id.rectangle_part1);
-        rectangle_part1.setOnClickListener(new View.OnClickListener() {
+        tittleToolbar.setText("Título do Texto");
+
+
+        //btnQuizTexto = findViewById(R.id.btn_quiz_texto);
+        /*btnQuizTexto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(IntroducaoComputacao.this, VariaveisModulo.class);
+                Intent intent = new Intent(VariaveisModulo.this, QuizActivity.class);
                 startActivity(intent);
                 finish();
             }
-        });
+        });*/
     }
 }

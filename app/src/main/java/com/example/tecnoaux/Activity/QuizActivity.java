@@ -1,8 +1,10 @@
 package com.example.tecnoaux.Activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,6 +15,11 @@ import android.widget.Toast;
 
 import com.example.tecnoaux.Models.QuestionsList;
 import com.example.tecnoaux.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +42,7 @@ public class QuizActivity extends AppCompatActivity {
     private int currentQuestionPosition = 0;
     private String selectedOptionByUser ="";
     private TextView timer;
+    private String getTopicName = "variaveis";
     private QuestionsList teste = new QuestionsList("Qual é o meu nome?", "Bryan",
             "Sil", "Cris", "Silvana", "Bryan","");
     @Override
@@ -56,16 +64,43 @@ public class QuizActivity extends AppCompatActivity {
         nxtBtn = findViewById(R.id.nxtBtn);
 
 
-        questionsLists.add(teste);
-        questionsLists.add(teste);
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://tecnoaux-79485-default-rtdb.firebaseio.com/");
+        ProgressDialog progressDialog = new ProgressDialog(QuizActivity.this);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Carregando...");
+        progressDialog.show();
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot dataSnapshot : snapshot.child(getTopicName).getChildren()){
+                    String getQuestion = dataSnapshot.child("questao").getValue(String.class);
+                    String getOption1 = dataSnapshot.child("opcao1").getValue(String.class);
+                    String getOption2 = dataSnapshot.child("opcao2").getValue(String.class);
+                    String getOption3 = dataSnapshot.child("opcao3").getValue(String.class);
+                    String getOption4 = dataSnapshot.child("opcao4").getValue(String.class);
+                    String getAnswer = dataSnapshot.child("resposta").getValue(String.class);
+
+                    QuestionsList questionsList = new QuestionsList(getQuestion, getOption1, getOption2, getOption3, getOption4,getAnswer);
+                    questionsLists.add(questionsList);
+                }
+                progressDialog.hide();
+
+                questions.setText((currentQuestionPosition+1)+"/"+questionsLists.size());
+                question.setText(questionsLists.get(0).getQuestion());
+                option1.setText(questionsLists.get(0).getOption1());
+                option2.setText(questionsLists.get(0).getOption2());
+                option3.setText(questionsLists.get(0).getOption3());
+                option4.setText(questionsLists.get(0).getOption4());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         startTimer();
 
-        questions.setText((currentQuestionPosition+1)+"/"+questionsLists.size());
-        question.setText(questionsLists.get(0).getQuestion());
-        option1.setText(questionsLists.get(0).getOption1());
-        option2.setText(questionsLists.get(0).getOption2());
-        option3.setText(questionsLists.get(0).getOption3());
-        option4.setText(questionsLists.get(0).getOption4());
         option1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -171,6 +206,9 @@ public class QuizActivity extends AppCompatActivity {
     private void changeNextQuestion(){
         currentQuestionPosition++;
 
+        if((currentQuestionPosition+1) == questionsLists.size()){
+            nxtBtn.setText("Finalizar Quiz");
+        }
         if(currentQuestionPosition < questionsLists.size()){
             selectedOptionByUser = "";
             setBackgroundResourceOptions();
@@ -183,13 +221,10 @@ public class QuizActivity extends AppCompatActivity {
             option4.setText(questionsLists.get(currentQuestionPosition).getOption4());
 
         }
-        else if((currentQuestionPosition+1) == questionsLists.size()){
-            nxtBtn.setText("Finalizar Quiz");
-        }
         else{
             Intent intent = new Intent(QuizActivity.this, QuizResults.class);
-            intent.putExtra("corretas", getCorrectAnswers());
-            intent.putExtra("erradas", questionsLists.size() - getCorrectAnswers());
+            intent.putExtra("correct", getCorrectAnswers());
+            intent.putExtra("incorrect", questionsLists.size() - getCorrectAnswers());
             startActivity(intent);
             finish();
         }
@@ -225,8 +260,8 @@ public class QuizActivity extends AppCompatActivity {
                     quizTimer.cancel();
                     Toast.makeText(QuizActivity.this, "Tempo acabou :(", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(QuizActivity.this, QuizResults.class);
-                    intent.putExtra("corretas", getCorrectAnswers());
-                    intent.putExtra("erradas", questionsLists.size() - getCorrectAnswers());
+                    intent.putExtra("corrects", getCorrectAnswers());
+                    intent.putExtra("incorrects", questionsLists.size() - getCorrectAnswers());
                     startActivity(intent);
                     finish();
                 }

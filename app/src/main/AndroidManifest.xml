@@ -14,13 +14,19 @@
         android:theme="@style/Theme.TecnoAux"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.FuncaoModulo"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.QuizResults"
+            android:exported="false" />
+        <activity
             android:name=".Activity.QuizActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.Register"
             android:exported="false" />
         <activity
-            android:name=".Activity.Texto"
+            android:name=".Activity.VariaveisModulo"
             android:exported="false" />
         <activity
             android:name=".Activity.IntroducaoComputacao"

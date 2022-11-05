@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mid"
+    android:elevation="4dp">
+
+    <TextView
+        android:id="@+id/tittle_Toolbar_result_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@id/return_Icon"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="Tecno Aux"/>
+
+</androidx.appcompat.widget.Toolbar>
