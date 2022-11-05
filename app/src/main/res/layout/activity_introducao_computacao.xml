@@ -19,9 +19,9 @@
       android:layout_marginStart="16dp"
       android:layout_marginTop="24dp"
       android:fontFamily="@font/nunito_sans_bold"
-      android:text="Texto: Título do texto"
+      android:text="Introdução à programação"
       android:textColor="#0D1333"
-      android:textSize="34sp"
+      android:textSize="28sp"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/include3" />
 
@@ -32,7 +32,7 @@
       android:layout_marginStart="16dp"
       android:layout_marginTop="16dp"
       android:fontFamily="@font/nunito_sans_bold"
-      android:text="Veja neste texto alguns conceitos básicos sobre computação"
+      android:text="Veja neste texto alguns conceitos básicos sobre programação"
       android:textColor="#61688b"
       android:textSize="20sp"
       app:layout_constraintEnd_toEndOf="parent"
@@ -54,9 +54,9 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:fontFamily="@font/nunito_sans_semibold"
-      android:text="Parte 1"
+      android:text="Fase 1 (Variáveis)"
       android:textColor="#0D1333"
-      android:textSize="30sp"
+      android:textSize="28sp"
       app:layout_constraintBottom_toBottomOf="@+id/rectangle_part1"
       app:layout_constraintStart_toEndOf="@+id/image_View_doc1"
       app:layout_constraintTop_toTopOf="@+id/rectangle_part1" />
@@ -72,6 +72,101 @@
       app:srcCompat="@drawable/ic_baseline_text_snippet_24" />
 
 
+  <View
+      android:id="@+id/rectangle_part2"
+      android:layout_width="246dp"
+      android:layout_height="77dp"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginStart="4dp"
+      android:layout_marginTop="24dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/rectangle_part1" />
 
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/nunito_sans_semibold"
+      android:text="Fase 2 (Funções)"
+      android:textColor="#0D1333"
+      android:textSize="28sp"
+      app:layout_constraintBottom_toBottomOf="@+id/rectangle_part2"
+      app:layout_constraintStart_toEndOf="@+id/image_View_doc2"
+      app:layout_constraintTop_toTopOf="@+id/rectangle_part2" />
+
+  <ImageView
+
+      android:id="@+id/image_View_doc2"
+      android:layout_width="82dp"
+      android:layout_height="63dp"
+      app:layout_constraintBottom_toBottomOf="@+id/rectangle_part2"
+      app:layout_constraintStart_toStartOf="@+id/rectangle_part2"
+      app:layout_constraintTop_toTopOf="@+id/rectangle_part2"
+      app:srcCompat="@drawable/ic_baseline_text_snippet_24" />
+
+
+  <View
+      android:id="@+id/rectangle_part3"
+      android:layout_width="246dp"
+      android:layout_height="77dp"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginStart="4dp"
+      android:layout_marginTop="28dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/rectangle_part2" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/nunito_sans_semibold"
+      android:text="Fase 3 (Passagem de Parâmetros)"
+      android:textColor="#0D1333"
+      android:textSize="28sp"
+      app:layout_constraintBottom_toBottomOf="@+id/rectangle_part3"
+      app:layout_constraintStart_toEndOf="@+id/image_View_doc3"
+      app:layout_constraintTop_toTopOf="@+id/rectangle_part3" />
+
+  <ImageView
+
+      android:id="@+id/image_View_doc3"
+      android:layout_width="82dp"
+      android:layout_height="63dp"
+      app:layout_constraintBottom_toBottomOf="@+id/rectangle_part3"
+      app:layout_constraintStart_toStartOf="@+id/rectangle_part3"
+      app:layout_constraintTop_toTopOf="@+id/rectangle_part3"
+      app:srcCompat="@drawable/ic_baseline_text_snippet_24" />
+
+
+  <View
+      android:id="@+id/rectangle_part4"
+      android:layout_width="246dp"
+      android:layout_height="77dp"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginStart="4dp"
+      android:layout_marginTop="32dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/rectangle_part3" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/nunito_sans_semibold"
+      android:text="Fase 4 (Linguagens e Tradutores)"
+      android:textColor="#0D1333"
+      android:textSize="28sp"
+      app:layout_constraintBottom_toBottomOf="@+id/rectangle_part4"
+      app:layout_constraintStart_toEndOf="@+id/image_View_doc4"
+      app:layout_constraintTop_toTopOf="@+id/rectangle_part4"/>
+
+  <ImageView
+      android:id="@+id/image_View_doc4"
+      android:layout_width="82dp"
+      android:layout_height="63dp"
+      app:layout_constraintBottom_toBottomOf="@+id/rectangle_part4"
+      app:layout_constraintStart_toStartOf="@+id/rectangle_part4"
+      app:layout_constraintTop_toTopOf="@+id/rectangle_part4"
+      app:srcCompat="@drawable/ic_baseline_text_snippet_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

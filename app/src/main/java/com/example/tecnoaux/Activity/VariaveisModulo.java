@@ -30,17 +30,24 @@ public class VariaveisModulo extends AppCompatActivity {
             }
         });
         tittleToolbar = findViewById(R.id.tittle_Toolbar);
-        tittleToolbar.setText("Título do Texto");
+        tittleToolbar.setText("Variáveis");
 
 
-        //btnQuizTexto = findViewById(R.id.btn_quiz_texto);
-        /*btnQuizTexto.setOnClickListener(new View.OnClickListener() {
+        btnQuizTexto = findViewById(R.id.btn_quiz_texto);
+        btnQuizTexto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(VariaveisModulo.this, QuizActivity.class);
+                intent.putExtra("topicName", "variaveis");
                 startActivity(intent);
                 finish();
             }
-        });*/
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(VariaveisModulo.this, IntroducaoComputacao.class));
+        finish();
     }
 }

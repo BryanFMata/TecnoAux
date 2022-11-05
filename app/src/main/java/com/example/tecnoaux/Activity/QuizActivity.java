@@ -41,10 +41,9 @@ public class QuizActivity extends AppCompatActivity {
     private List<QuestionsList> questionsLists = new ArrayList<>();
     private int currentQuestionPosition = 0;
     private String selectedOptionByUser ="";
+    private String getTopicName;
     private TextView timer;
-    private String getTopicName = "variaveis";
-    private QuestionsList teste = new QuestionsList("Qual é o meu nome?", "Bryan",
-            "Sil", "Cris", "Silvana", "Bryan","");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +63,8 @@ public class QuizActivity extends AppCompatActivity {
         nxtBtn = findViewById(R.id.nxtBtn);
 
 
+        getTopicName = getIntent().getStringExtra("topicName");
+
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://tecnoaux-79485-default-rtdb.firebaseio.com/");
         ProgressDialog progressDialog = new ProgressDialog(QuizActivity.this);
         progressDialog.setCancelable(false);
@@ -72,7 +73,7 @@ public class QuizActivity extends AppCompatActivity {
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot : snapshot.child(getTopicName).getChildren()){
+                for(DataSnapshot dataSnapshot : snapshot.child(getTopicName ).getChildren()){
                     String getQuestion = dataSnapshot.child("questao").getValue(String.class);
                     String getOption1 = dataSnapshot.child("opcao1").getValue(String.class);
                     String getOption2 = dataSnapshot.child("opcao2").getValue(String.class);
@@ -225,6 +226,7 @@ public class QuizActivity extends AppCompatActivity {
             Intent intent = new Intent(QuizActivity.this, QuizResults.class);
             intent.putExtra("correct", getCorrectAnswers());
             intent.putExtra("incorrect", questionsLists.size() - getCorrectAnswers());
+            intent.putExtra("topicName", getTopicName);
             startActivity(intent);
             finish();
         }

@@ -13,9 +13,12 @@ import com.example.tecnoaux.R;
 
 public class IntroducaoComputacao extends AppCompatActivity {
 
-    ImageView returnIcon;
-    TextView tittleToolbar;
-    View rectangle_part1;
+    private ImageView returnIcon;
+    private TextView tittleToolbar;
+    private View rectangle_part1;
+    private View rectangle_part2;
+    private View rectangle_part3;
+    private View rectangle_part4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,5 +43,32 @@ public class IntroducaoComputacao extends AppCompatActivity {
                 finish();
             }
         });
+        rectangle_part2 = findViewById(R.id.rectangle_part2);
+        rectangle_part2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(IntroducaoComputacao.this, FuncaoModulo.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        rectangle_part3 = findViewById(R.id.rectangle_part3);
+        rectangle_part3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(IntroducaoComputacao.this, PassagemParametroModulo.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        rectangle_part4 = findViewById(R.id.rectangle_part4);
+        rectangle_part4.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(IntroducaoComputacao.this, LinguagensTradutoresModulo.class);
+                startActivity(intent);
+                finish();
+            }
+        }));
     }
 }
