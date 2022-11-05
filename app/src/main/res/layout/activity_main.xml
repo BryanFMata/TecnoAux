@@ -72,9 +72,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/nunito_sans_semibold"
-        android:text="Introdução à Computação"
+        android:text="Introdução à Programação"
         android:textColor="#FDFAFA"
-        android:textSize="28sp"
+        android:textSize="26sp"
         app:layout_constraintStart_toStartOf="@+id/rectangle_Introducao"
         app:layout_constraintTop_toTopOf="@+id/rectangle_Introducao" />
 

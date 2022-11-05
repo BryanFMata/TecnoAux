@@ -79,41 +79,10 @@ public class Dicionario extends AppCompatActivity {
 
     }
 
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-
-        MenuItem myActionMenuItem = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView)myActionMenuItem.getActionView();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-                if (TextUtils.isEmpty(s)){
-                    adapter.filter("");
-                    listView.clearTextFilter();
-                }
-                else {
-                    adapter.filter(s);
-                }
-                return true;
-            }
-        });
-        return true;
-    }
-
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id==R.id.action_settings){
-            //do your functionality here
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }*/
+    public void onBackPressed() {
+        Intent intent = new Intent(Dicionario.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

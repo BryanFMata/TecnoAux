@@ -71,4 +71,11 @@ public class IntroducaoComputacao extends AppCompatActivity {
             }
         }));
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(IntroducaoComputacao.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }
