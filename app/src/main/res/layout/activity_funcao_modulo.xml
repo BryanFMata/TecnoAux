@@ -1,9 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.FuncaoModulo">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/include4"
+            layout="@layout/toolbar" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/txt_titulo_parte_funcao"
+            android:layout_width="383dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:text="O que é uma função?"
+            android:textColor="#0D1333"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include4" />
+
+        <TextView
+            android:id="@+id/refTextFuncao"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Retirado/adaptado de: https://sites.google.com/site/esdicapsi/funcoes\nEscrito por: Wiki Livros(2015)"
+            android:textColor="#0D1333"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_titulo_parte_funcao" />
+
+        <TextView
+            android:id="@+id/txtViewP1Funcao"
+            android:layout_width="383dp"
+            android:layout_height="370dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Uma função é um pedaço de código que faz alguma tarefa específica e pode ser chamado de qualquer parte do programa quantas vezes desejarmos. Utilizamos funções para obter:\n       • Reutilização: muitas vezes queremos executar uma certa tarefa várias vezes ao longo do programa. Repetir todo o código para essa operação é muito trabalhoso, e torna mais difícil a manutenção do código: se acharmos um erro nesse código, teremos que corrigí-lo em todas as repetições do código. Chamar uma função diversas vezes contorna esses dois problemas.\n       • Independência: uma função é relativamente independente do código que a chamou. Uma função pode modificar variáveis globais ou ponteiros, mas limitando-se aos dados fornecidos pela chamada de função.\n      O princípio de uma função está, naturalmente, em permitir encapsular uma ideia ou operação, dando-lhe um nome, e então chamar essa operação de várias partes do resto de seu programa simplesmente usando o seu nome."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/refTextFuncao" />
+
+        <TextView
+            android:id="@+id/txtViewT1Funcao"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Definindo uma função"
+            android:textColor="#0D1333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP1Funcao" />
+
+        <TextView
+            android:id="@+id/txtViewP2Funcao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Uma função pode necessitar de alguns dados para que possa realizar alguma ação baseada neles. Esses dados são chamados parâmetros da função. Além disso, a função pode retornar um certo valor, que é chamado valor de retorno. Os parâmetros (e seus tipos) devem ser especificados explicitamente, assim como o tipo do valor de retorno.\nA forma geral da definição de uma função é:\n[tipo de retorno da função] nome_da_função (1º parâmetro, 2º parâmetro, …)\n{\n//código\n}\n  • Para o nome da função e dos parâmetros valem as mesmas regras que foram definidas para os nomes de variáveis. Não podemos usar o mesmo nome para funções diferentes num programa.\n   • O código deve estar obrigatoriamente dentro das chavetas e funciona como qualquer outro bloco."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewT1Funcao" />
+
+        <TextView
+            android:id="@+id/txtViewT2Funcao"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Valor de retorno"
+            android:textColor="#0D1333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP2Funcao" />
+        <TextView
+            android:id="@+id/txtViewP3Funcao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Frequentemente, uma função faz algum tipo de processamento ou cálculo e precisa devolver o resultado desse procedimento. Isso se chama valor de retorno e pode ser feito com a instrução return. Para poder devolver um valor é necessário especificar o seu tipo (char, int, float, double e variações). Para efetivamente devolver um valor, usamos a instrução return seguida do valor de retorno, que pode ou não vir entre parêntesis. Um exemplo bem simples de função que retorna um valor inteiro:\nint tres()\n{\n     return 3;  // poderia também ser return (3);\n}\n        O tipo de retorno, além dos tipos normais de variáveis (char, int, float, double e suas variações), pode ser o tipo especial void, que na verdade significa que não há valor de retorno."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewT2Funcao" />
+
+        <TextView
+            android:id="@+id/txtViewT3Funcao"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Por que as variáveis são importantes para um programador?"
+            android:textColor="#0D1333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP3Funcao" />
+        <TextView
+            android:id="@+id/txtViewP4Funcao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      As variáveis de programação são fundamentais para o dia a dia do programador. Elas orientam o programa a executar operações, permitem a validação de dados, evitam que o usuário faça operações proibidas e auxiliam na manutenção da integridade dos registros existentes. Assim, a ferramenta pode apresentar a usabilidade esperada de maneira contínua. \n      Variáveis de programação também podem ser utilizadas para orientar o programa a utilizar a memória do computador corretamente. Se o programador faz a manipulação dessa parte do código-fonte corretamente, ele consegue orientar o software a fazer um bom tratamento de dados. Dessa maneira, o sistema terá uma taxa de erros muito menor."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewT3Funcao" />
+        <TextView
+            android:id="@+id/txtViewT4Funcao"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Parâmetros"
+            android:textColor="#0D1333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP4Funcao" />
+        <TextView
+            android:id="@+id/txtViewP5Funcao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Como já foi dito, um parâmetro é um valor que é fornecido à função quando ela é chamada. É comum também chamar os parâmetros de argumentos, embora argumento esteja associado ao valor de um parâmetro. Geralmente, são utilizados dois tipos de passagem de parâmetros, passagem por valor e passagem por referência, que serão explicados na fase 3.\n        Para declarar a presença de parâmetros, usamos uma lista de parâmetros entre parênteses, com os parâmetros separados por vírgulas. Cada declaração de parâmetro é feita de maneira semelhante à declaração de variáveis: a forma geral é tipo nome. Por exemplo:\nint funcao (int a, int b);\nfloat funcao (float preco, int quantidade);\n     Para especificar que a função não usa nenhum parâmetro, a lista de parâmetros deve estar vazia ou com a palavra void. Por exemplo:\nvoid funcao (void);\nvoid funcao ();"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewT4Funcao" />
+        <TextView
+            android:id="@+id/txtViewT6Funcao"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Chamadas de funções"
+            android:textColor="#0D1333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP5Funcao" />
+        <TextView
+            android:id="@+id/txtViewP6Funcao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Para executar uma função, fazemos uma chamada de função, que é uma instrução composta pelo nome da função, seguido pela lista de argumentos entre parênteses:\nnome_da_função (arg1, arg2, ...);\n      Lembre-se que deve sempre dar o mesmo número de argumentos que a função pede. Além disso, embora algumas conversões de tipo sejam feitas automaticamente pelo compilador, deve atender aos tipos dos argumentos. A própria chamada de função também é uma expressão cujo valor é o valor de retorno da função, bastando colocá-la no lado direito de um sinal de igual para guardar o valor numa variável."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewT6Funcao" />
+
+        <TextView
+            android:id="@+id/txtViewPFFuncao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Além disso, como dito anteriormente, temos diferentes tipos de passagem de parâmetros (valor e referência). Pronto para aprender sobre eles na próxima fase?!"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP6Funcao" />
+
+        <Button
+            android:id="@+id/btn_quiz_textoFuncao"
+            android:layout_width="387dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="#02366c"
+            android:fontFamily="@font/nunito_sans"
+            android:text="Ir para o quiz"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewPFFuncao" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

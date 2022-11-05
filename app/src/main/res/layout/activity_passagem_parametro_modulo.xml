@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.PassagemParametroModulo">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/include4"
+            layout="@layout/toolbar" />
+
+        <TextView
+            android:id="@+id/txt_titulo_parte_Parametro"
+            android:layout_width="383dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:text="Passagem de Parâmetro"
+            android:textColor="#0D1333"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include4" />
+
+        <TextView
+            android:id="@+id/refTextParametro"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Retirado/adaptado de: https://www.tecconcursos.com.br/blog/noticias/passagem-de-parametro/\nEscrito por: Heitor Pasti(2020)"
+            android:textColor="#0D1333"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_titulo_parte_Parametro" />
+
+        <TextView
+            android:id="@+id/txtViewP1Parametro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      A passagem de parâmetro é assunto muito recorrente nas mais diversas provas de concursos por aí e hoje vamos conversar um pouco sobre isto. A passagem de parâmetro pode ser feita de duas formas: Passagem de Parâmetro por Valor e Passagem de Parâmetro por Referência."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/refTextParametro" />
+
+        <TextView
+            android:id="@+id/txtViewT1Parametro"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Passagem de Parâmetro por Valor"
+            android:textColor="#0D1333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP1Parametro" />
+
+        <TextView
+            android:id="@+id/txtViewP2Parametro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Na Passagem de Parâmetro por Valor uma cópia do valor de um argumento é feita no parâmetro da função (aqueles entre os parênteses).\n       Ao fazer esta cópia do valor, qualquer alteração feita no parâmetro não terá nenhum efeito nas variáveis usadas para chamá-la.\nVamos a um exemplo:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewT1Parametro" />
+
+        <ImageView
+            android:id="@+id/imgPassagemValor"
+            android:layout_width="381dp"
+            android:layout_height="162dp"
+            android:src="@drawable/valor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP2Parametro"/>
+
+        <TextView
+            android:id="@+id/txtViewP3Parametro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      No exemplo acima temos uma função de inteiros, chamada funcao, com um parâmetro, chamado x também de inteiros. No corpo da função funcao temos uma multiplicação simples e uma instrução de retorno, que retorna x.\n       Dentro da função principal, int main, que é quem chamará a função funcao, temos uma variável t, de inteiros, que irá fazer a chamada da função efetivamente. Agora é que vem o pulo do gato. Perceba que dentro do printf estamos imprimindo dois valores: no primeiro temos t chamando a função funcao e no segundo apenas o t.\n      Quando t chama a função, funcao(t), ele manda uma cópia do seu valor para a função. Dentro da função funcao a cópia deste valor é recebida pelo parâmetro x. Assim, quando chamamos a função funcao, pela variável t, a cópia do valor, que é 10, é usado pela função, por isso retorna o valor 100. Perceba, portanto, que quando chamamos apenas o valor de t, ele permanece inalterado dentro da função principal. Isto ocorre, pois na Passagem de Parâmetro por Valor o que ocorre dentro da função não tem efeito algum sobre a variável usada na chamada da mesma.\n     Resumindo a Passagem de Parâmetro por Valor: é feita uma cópia de um argumento, no exemplo é a variável t, para o parâmetro da função funcao, que no nosso exemplo é x e qualquer alteração do valor dentro da função não afeta em nada o valor original do argumento."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgPassagemValor" />
+
+        <TextView
+            android:id="@+id/txtViewT3Parametro"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Passagem de Parâmetro por Referência"
+            android:textColor="#0D1333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP3Parametro" />
+        <TextView
+            android:id="@+id/txtViewP4Parametro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Na Passagem de Parâmetro por Referência passamos todo o endereço do argumento para o parâmetro. Devido a isto, qualquer alteração feita no parâmetro afeta a variável usada para chamar a função, pois dentro da função é usado o endereço real do argumento para acessá-lo na hora da chamada da função.\nVamos a um exemplo:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewT3Parametro" />
+        <ImageView
+            android:id="@+id/imgPassagemReferencia"
+            android:layout_width="381dp"
+            android:layout_height="162dp"
+            android:src="@drawable/referencia"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP4Parametro"/>
+        <TextView
+            android:id="@+id/txtViewP5Parametro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Perceba acima, que passamos para a função funcao o endereço completo do argumento, por isso, as alterações que foram feitas dentro da função afetaram diretamente o valor original do argumento. Portanto, temos o mesmo valor tanto para chamada da função quanto para chamada direto da variável t, pois neste tipo de passagem de parâmetro o que acontece na função afeta o valor original da variável usada na chamada.\n      Resumindo a Passagem de Parâmetro por Referência: o endereço de um argumento, no exemplo é a variável t, é passado para o parâmetro da função funcao, que no nosso exemplo é x, e qualquer alteração do valor dentro da função afeta o valor original do argumento."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgPassagemReferencia" />
+        <TextView
+            android:id="@+id/txtViewP6Parametro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="Concluímos, portanto que:\n       • Na Passagem de Parâmetro por Valor as alterações feitas na função NÃO afetam o valor do argumento usado para chamar a função, pois é passado apenas o valor do argumento.\n     • Na Passagem de Parâmetro por Referência as alterações feitas na função afetam o valor do argumento usado para chamar a função, pois é passado todo o endereço real do argumento."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP5Parametro" />
+        <TextView
+            android:id="@+id/txtViewPFParametro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="\n        Porém nem todas as linguagens de programação possuem esses dois tipos de passagem de parâmetros, Java por exemplo, realiza sua passagem de parâmetros por valor, criando uma outra lógica para referenciar objetos e variáveis (o que é papo para outra hora :D). Mas você sabe o que é uma linguagem de programação? O que são compiladores e interpretadores? Na próxima e útlima fase teremos uma explicação para te ajudar."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP6Parametro" />
+
+        <Button
+            android:id="@+id/btn_quiz_textoFuncao"
+            android:layout_width="387dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="#02366c"
+            android:fontFamily="@font/nunito_sans"
+            android:text="Ir para o quiz"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewPFParametro" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

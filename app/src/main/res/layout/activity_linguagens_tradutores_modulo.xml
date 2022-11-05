@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.LinguagensTradutoresModulo">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/include4"
+            layout="@layout/toolbar" />
+
+        <TextView
+            android:id="@+id/txt_titulo_parte_Linguagens"
+            android:layout_width="383dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:text="Linguagem de programação: conheça os principais conceitos e ferramentas desse universo"
+            android:textColor="#0D1333"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include4" />
+
+        <TextView
+            android:id="@+id/refTextLinguagens"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Retirado/adaptado de: https://www.napratica.org.br/linguagem-de-programacao\nEscrito por: Tatyane Mendes(2022)"
+            android:textColor="#0D1333"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_titulo_parte_Linguagens" />
+
+        <TextView
+            android:id="@+id/txtViewP1Linguagens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Dentro da área de tecnologia, compreender e dominar a linguagem de programação é uma das habilidades mais requisitadas dos profissionais. Mesmo para quem atua fora do setor, esse conhecimento é considerado um diferencial por causa do avanço de ferramentas tecnológicas e da digitalização nas organizações. Além disso, noções de programação auxiliam as pessoas a inovar e compreender melhor as novas tecnologias."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/refTextLinguagens" />
+
+        <TextView
+            android:id="@+id/txtViewT1Linguagens"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Mas o que é uma linguagem de programação?"
+            android:textColor="#0D1333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP1Linguagens" />
+
+        <TextView
+            android:id="@+id/txtViewP2Linguagens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Você já viu pessoas que trabalham com tecnologia olhando para uma tela com vários códigos que parecem não fazer sentido? Bem, essa é uma linguagem de programação. A expressão se refere a um conjunto de regras e instruções que um programador constrói para gerar programas e softwares que serão processados por um computador, dispositivo móvel ou outro equipamento.\n       Quando estruturada, essa língua forma o código fonte de um software e informa a uma ferramenta quais ações ela deve tomar, por exemplo. A utilização da linguagem de programação se popularizou porque ela gera mais produtividade para os programadores em relação ao uso do código de máquina, que são as instruções que o computador compreende de fábrica.\n        Com isso, assim o dispositivo tem uma facilidade maior de compreender o que deve ser feito, além de se tornar menos dependente de ambientes computacionais específicos. A linguagem é composta por símbolos, palavras-chave, regras semânticas e sintáticas e são classificadas em níveis."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewT1Linguagens" />
+
+        <TextView
+            android:id="@+id/txtViewT2Linguagens"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Os tipos de linguagem"
+            android:textColor="#0D1333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP2Linguagens" />
+        <TextView
+            android:id="@+id/txtViewP3Linguagens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Uma linguagem de programação pode ser de nível alto ou baixo. As chamadas de alto nível possuem uma construção linguística que se aproxima mais da forma humana de se comunicar. Por exemplo, é comum ver termos em inglês como “delete” que oferecem instruções para que o programa apague alguma informação. Isso torna esse modelo um pouco mais intuitivo e fácil de aprender.\n        Já a linguagem de baixo nível, utiliza comandos mais complexos e o código binário, que são sequências combinadas dos números 0 e 1. Isso otimiza a comunicação com a máquina, aumentando a agilidade do processo. Os diferentes tipos funcionam melhor de acordo com o objetivo que se busca atingir.  Um exemplo desse tipo de linguagem é a linguagem Assembly.\n     Em relação as linguagens de alto nível, elas podem fazer parte de diferentes classificações, mas existem algumas que são essenciais para qualquer programador ou profissional de tecnologia. Segundo um levantamento realizado pela consultoria de programação norte-americana RedMonk, as linguagens de programação mais populares são JavaScript, Python, Java, PHP, CSS, C#, C++ e C."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewT2Linguagens" />
+
+        <TextView
+            android:id="@+id/txt_titulo_parte_Tradutores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:text="Métodos de tradução: interpretador x compilador"
+            android:textColor="#0D1333"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP3Linguagens" />
+
+
+        <TextView
+            android:id="@+id/refTextTradutores"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Retirado/adaptado de: https://imasters.com.br/desenvolvimento/metodos-de-traducao-interpretador-x-compilador\nEscrito por: Penélope Victória(2019)"
+            android:textColor="#0D1333"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_titulo_parte_Tradutores" />
+
+        <TextView
+            android:id="@+id/txtViewP4Tradutores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Quando estamos codificando um sistema, nem sempre nos preocupamos com o trabalho feito por trás daquela programação. No entanto, saber qual método de tradução pode ajudar bastante na hora de distribuir um projeto, especialmente quando se trata de portabilidade ou desempenho."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/refTextTradutores" />
+        <TextView
+            android:id="@+id/txtViewT4Tradutores"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Interpretador x compilador"
+            android:textColor="#0D1333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP4Tradutores" />
+        <TextView
+            android:id="@+id/txtViewP5Tradutores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Basicamente, um compilador é um programa (ou um conjunto deles) como qualquer outro, porém seu objetivo principal é o de traduzir todas as suas linhas de código para outra linguagem – normalmente, uma de alto nível para outra de baixo nível (Assembly ou linguagem de máquina).\n      Um interpretador também é um programa, mas, ao contrário do compilador, ele não converte o código todo para linguagem de máquina de uma vez. Ele executa diretamente cada instrução, passo a passo.\n       Em suma, a grande diferença está na forma de execução. Enquanto um compilador analisa todo o código a fim de traduzi-lo de uma vez (muitas vezes, o resultado é um arquivo executável ou uma biblioteca), o interpretador faz esse trabalho de conversão aos poucos, sempre que uma declaração ou função é executada, por exemplo.\n        Embora isso dê a sugestão de que essa interpretação leve muito tempo para ficar pronta, o compilador também caminha bastante para ser convertido. Porém, uma vez compilado, ele não precisará fazer mais essa tradução – a menos que o código precise ser alterado."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewT4Tradutores" />
+
+        <TextView
+            android:id="@+id/txtViewPFTradutores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="      Com isso, acabamos nosso módulo de introdução a programação. Espero que tenha te ajudado a dar os primeiros passos neste universo tão amplo. Para fechar com chave de ouro, temos o último quiz do módulo. Boa sorte e logo logo nos encontramos na busca por novos conhecimentos :D"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewP5Tradutores" />
+
+        <Button
+            android:id="@+id/btn_quiz_texto"
+            android:layout_width="387dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="#02366c"
+            android:fontFamily="@font/nunito_sans"
+            android:text="Ir para o quiz"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewPFTradutores" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
